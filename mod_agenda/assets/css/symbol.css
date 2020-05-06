@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Forum|Jura&display=swap');
+
+/* Tables
+================================== */
+.Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+}
+.Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border: solid 3px white;
+  background: rgba(112, 128, 144, 0.2);
+}
+.Rtable-cell > h1,
+.Rtable-cell > h2,
+.Rtable-cell > h3,
+.Rtable-cell > h4,
+.Rtable-cell > h5,
+.Rtable-cell > h6 {
+  margin: 0;
+}
+
+/* Agenda-Formating
+================================== */
+.month{
+	text-align: center;
+	/* font-size: 2em; */
+	font-weight: bold;
+	font-family: 'Jura', sans-serif;
+	margin: 1;
+	color: #2C3236;
+}
+.day{
+	text-align: center;
+	font-size: 2em;
+	font-weight: bold;
+	font-family: 'Jura', sans-serif;
+	color: #2C3236;
+}
+.title{
+	font-weight: bold;
+	font-size: 0.75em;
+}
+.time{	
+	font-size: 0.8em;
+}
+.year{
+	text-align: center;
+	/* font-size: 2em; */
+	font-weight: bold;
+	font-family: 'Jura', sans-serif;
+	margin: 0;
+	color: #2C3236;
+}
+.place{
+	font-size: 0.8em;	
+}
+.spacer{
+	height: 12px;
+}
+
+/* Table column sizing
+================================== */
+.Rtable--2cols > .Rtable-cell {
+  width: 50%;
+}
+.Rtable--3cols > .Rtable-cell {
+  width: 33.33%;
+}
+.Rtable--4cols > .Rtable-cell {
+  width: 25%;
+}
+.Rtable--5cols > .Rtable-cell {
+  width: 20%;
+}
+.Rtable--6cols > .Rtable-cell {
+  width: 16.6%;
+}
+
+
+/* Apply styles
+================================== */
+.Rtable {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.Rtable-cell {
+  margin: -3px 0 0 -3px;
+  background-color: white;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+/* Cell styles
+================================== */
+.Rtable-cell--datesheet {
+	background-image: url('../images/calendar-page-empty.svg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.Rtable-cell--datesheet > h1,
+.Rtable-cell--datesheet > h2,
+.Rtable-cell--datesheet > h3,
+.Rtable-cell--datesheet > h4,
+.Rtable-cell--datesheet > h5,
+.Rtable-cell--datesheet > h6 {
+  color: white;
+}
+.Rtable-cell--foot {
+  margin-bottom: 1em;
+}
+
+/* Responsive half
+==================================== */
+@media all and (max-width: 1200px) {
+  .Rtable--collapse {
+    display: flex;
+  }
+  .Rtable--collapse > .Rtable-cell {
+    width: 50% !important;
+  }
+  .Rtable--collapse > .Rtable-cell--foot {
+    margin-bottom: 0;
+  }
+}
+.no-flexbox .Rtable {
+  display: block;
+}
+.no-flexbox .Rtable > .Rtable-cell {
+  width: 50%;
+}
+.no-flexbox .Rtable > .Rtable-cell--foot {
+  margin-bottom: 1em;
+}
+
+/* Responsive
+==================================== */
+@media all and (max-width: 600px) {
+  .Rtable--collapse {
+    display: block;
+  }
+  .Rtable--collapse > .Rtable-cell {
+    width: 100% !important;
+  }
+  .Rtable--collapse > .Rtable-cell--foot {
+    margin-bottom: 0;
+  }
+}
+.no-flexbox .Rtable {
+  display: block;
+}
+.no-flexbox .Rtable > .Rtable-cell {
+  width: 100%;
+}
+.no-flexbox .Rtable > .Rtable-cell--foot {
+  margin-bottom: 1em;
+}

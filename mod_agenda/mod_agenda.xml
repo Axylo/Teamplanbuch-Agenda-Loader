@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+
+<extension type = "module" version = "3.1.0" client = "site" method="upgrade">
+
+	<name>Agenda-Loader</name>
+	<author>Alex Schwerzmann</author>
+	<version>1.1.0</version>
+	<description>Loads an ICS-File into a Calendar Sheet view</description>
+	<creationDate>August-December 2019</creationDate>
+	<copyright>Copyright (C) 2019 Alex Schwerzmann. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>webmaster@stratman.ch</authorEmail>
+	<authorUrl>www.stratman.ch</authorUrl>
+	<files>
+		<filename module = "mod_agenda">mod_agenda.php</filename>
+		<folder>assets</folder>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>mod_agenda.xml</filename>
+	</files>
+	
+   <config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="icsFile" type="text" label="ICS-File" description="ICS-File"  default="" filter="" />
+				<field name="cssFile" type="list" label="Layout" description="Layout"  default="Please select an option" filter="">
+					<option value="simple.css">Simple Calender Layout</option>
+					<option value="symbol.css">With Calender Icons</option>
+				</field>
+				<field name="columns" type="list" label="Columns" description="Columns"  default="Please select an option" filter="">
+					<option value="2">1 Columns</option>
+					<option value="4">2 Columns</option>
+					<option value="6">3 Columns</option>
+				</field>
+				<field name="categories" type="text" label="Categories" description="Categories"  default="Please separate categories by ; only" filter="" />
+				<field name="timeZone" type="text" label="Timezone" description="Timezone"  default="Europe/Zurich" filter="" />
+				<field name="timeFormat" type="text" label="Timeformat" description="Timeformat"  default="Y-m-d G:i:s" filter="" />
+			</fieldset>
+		</fields>
+   </config>
+	
+</extension>
